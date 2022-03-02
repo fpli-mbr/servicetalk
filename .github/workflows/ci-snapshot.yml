@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Check SNAPSHOT version suffix
         run: if [[ $(cat gradle.properties | grep version= | sed 's/^version=//') =~ .*-SNAPSHOT ]]; then exit 0; else exit 1; fi
       - name: Set up JDK 8
